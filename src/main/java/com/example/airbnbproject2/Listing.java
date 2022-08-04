@@ -1,7 +1,7 @@
 package com.example.airbnbproject2;
 
 public class Listing {
-    private int id;
+    private String id;
     private String name;
     private int host_id;
     private String host_name;
@@ -18,7 +18,7 @@ public class Listing {
     private int availabilty_365;
     private int number_of_reviews_ltm;
 
-    public Listing(int id, String name, int host_id, String host_name,String neighbourhood, double latitude, double longitude, String room_type, int price, int min_stay, int no_reviews, String last_review, double review_pm, int calc_Listings, int availabilty_365, int number_of_reviews_ltm){
+    public Listing(String id, String name, int host_id, String host_name,String neighbourhood, double latitude, double longitude, String room_type, int price, int min_stay, int no_reviews, String last_review, double review_pm, int calc_Listings, int availabilty_365, int number_of_reviews_ltm, boolean booked, int checkDate, int leaveDate){
         this.id = id;
         this.name = name;
         this.host_id = host_id;
@@ -41,7 +41,7 @@ public class Listing {
      *
      * @return Id of property
      */
-    public int getId ()
+    public String getId ()
     {
         return id;
     }
@@ -68,6 +68,14 @@ public class Listing {
      */
     public String getHost_name(){
         return host_name;
+    }
+
+    /**
+     *
+     * @return Neighbourhood of property
+     */
+    public String getNeighbourhood() {
+        return neighbourhood;
     }
 
     /**

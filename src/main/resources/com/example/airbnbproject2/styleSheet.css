@@ -1,4 +1,7 @@
-.bodybg{
-    -fx-background-image: url('1.jpg');
+.pane{
+    -fx-background-image: url("1.jpg");
     -fx-background-size: 50% , 50%;
+}
+.button{
+   -fx-background-color: #ffffff;
 }
