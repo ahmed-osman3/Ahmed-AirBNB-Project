@@ -1,22 +1,25 @@
-public class Listing {
-    private int id;
-    private String name;
-    private int host_id;
-    private String host_name;
-    private String neighbourhood;
-    private double latitude;
-    private double longitude;
-    private String room_type;
-    private int price;
-    private int min_stay;
-    private int no_reviews;
-    private String last_review;
-    private double review_pm;
-    private int calc_Listings;
-    private int availabilty_365;
-    private int number_of_reviews_ltm;
+package com.example.airbnbproject2;
 
-    public Listing(int id, String name, int host_id, String host_name,String neighbourhood, double latitude, double longitude, String room_type, int price, int min_stay, int no_reviews, String last_review, double review_pm, int calc_Listings, int availabilty_365, int number_of_reviews_ltm){
+public class Listing {
+    private final String id;
+    private final String name;
+    private final int host_id;
+    private final String host_name;
+    private final String neighbourhood;
+    private final double latitude;
+    private final double longitude;
+    private final String room_type;
+    private final String  price;
+    private final int min_stay;
+    private int no_reviews;
+    private final String last_review;
+    private final double review_pm;
+    private final int calclisting;
+    private int num_review;
+
+
+
+    public Listing(String id, String name,int host_id, String host_name,String neighbourhood, double latitude, double longitude, String room_type,String price, int min_stay,int no_reviews, String last_review, double review_pm, int calcListing, int num_review,boolean booked, int checkDate, int leaveDate){
         this.id = id;
         this.name = name;
         this.host_id = host_id;
@@ -30,16 +33,16 @@ public class Listing {
         this.no_reviews = no_reviews;
         this.last_review = last_review;
         this.review_pm = review_pm;
-        this.calc_Listings = calc_Listings;
-        this.availabilty_365 = availabilty_365;
-        this.number_of_reviews_ltm = number_of_reviews_ltm;
+        this.calclisting = calcListing;
+        this.no_reviews = no_reviews;
+
     }
 
     /**
      *
      * @return Id of property
      */
-    public int getId ()
+    public String getId ()
     {
         return id;
     }
@@ -51,6 +54,8 @@ public class Listing {
     public  String getName(){
         return name;
     }
+
+
 
     /**
      *
@@ -66,6 +71,14 @@ public class Listing {
      */
     public String getHost_name(){
         return host_name;
+    }
+
+    /**
+     *
+     * @return Neighbourhood of property
+     */
+    public String getNeighbourhood() {
+        return neighbourhood;
     }
 
     /**
@@ -92,11 +105,12 @@ public class Listing {
         return room_type;
     }
 
+
     /**
      *
      * @return Price of property
      */
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 
@@ -107,6 +121,8 @@ public class Listing {
     public int getMin_stay() {
         return min_stay;
     }
+
+
 
     /**
      *
@@ -132,11 +148,4 @@ public class Listing {
         return review_pm;
     }
 
-    /**
-     *
-     * @return Availability of property per year
-     */
-    public int getAvailabilty_365() {
-        return availabilty_365;
-    }
 }
