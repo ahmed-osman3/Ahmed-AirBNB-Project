@@ -1,0 +1,27 @@
+.pane{
+    -fx-background-image: url("1.jpg");
+    -fx-background-size: 50% , 50%;
+}
+.button{
+   -fx-background-color: #ffffff;
+}
+
+#hbox{
+    -fx-spacing: 100px;
+    -fx-padding: 10px;
+}
+
+#box{
+    -fx-spacing: 100px;
+    -fx-padding: 100px;
+
+}
+
+#myButton {
+    -fx-background-color: transparent;
+    -fx-cursor: pointer;
+}
+
+#myButton:hover {
+    -fx-cursor: hand;
+}
